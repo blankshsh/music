@@ -13,6 +13,15 @@ const home = {
           reject(error)
         })
       })
+    },
+    GetJsonp ({ commit }, data) {
+      return new Promise((resolve, reject) => {
+        api.getJsonp(data).then(data => {
+          resolve(data)
+        }).catch(error => {
+          reject(error)
+        })
+      })
     }
   }
 }
