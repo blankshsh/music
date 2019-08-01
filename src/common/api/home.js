@@ -10,5 +10,5 @@ export function getDiscList (params) {
 }
 
 export function getJsonp (data) {
-  return jsonp(data.url, data.data, data.options)
+  return jsonp(data.url, data.data, data.options || {})
 }
